@@ -4,14 +4,15 @@ var Schema = mongoose.Schema;
 
 var userSchema = new Schema({
   name: String,
-  phone: integer,
+  phone: String,
   email: String,
   address: String,
-  id:ObjectId,
 });
 
 var issueSchema = new Schema({
-    id: ObjectId,
-    phone: integer,
+    phone: String,
     type: String,
 })
+
+module.exports = mongoose.model("userSchema",userSchema);
+module.exports = mongoose.model("issueSchema",issueSchema);
