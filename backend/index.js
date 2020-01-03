@@ -5,7 +5,8 @@ const reset = require('./routes/reset.js');
 const register = require('./routes/register.js');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
-const detail = require('./routes/detail')
+const detail = require('./routes/detail');
+const path = require("path");
 
 const PORT = 8000;
 const app = express();
@@ -21,15 +22,20 @@ app.use(function(req, res, next) {
     res.header('Access-Control-Allow-Methods', 'GET,POST,PATCH,DELETE');
     next();
   });
-
 mongoose.connect(`mongodb://localhost/issue_tracker`);
-
 
 app.use('/login',login);
 app.use('/issue',issue);
 app.use('/detail',detail);
 app.use('/register',register);
 app.use('/reset',reset);
+
+app.use(express.static(path.join(__dirname, "client", "build")))
+
+
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "client", "build", "index.html"));
+});
 
 app.listen(PORT,()=>{
     console.log("App is running on http://localhost:8000");
