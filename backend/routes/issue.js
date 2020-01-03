@@ -1,6 +1,6 @@
 const express = require('express');
 const route = express.Router();
-const Issue = require('./issueSchema');
+const Issue = require('../models/issueSchema');
 
 route.get('/',(req,res)=>{
     Issue.find()

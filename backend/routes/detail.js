@@ -1,6 +1,6 @@
 const express = require('express');
 const route = express.Router();
-const User = require('./schema')
+const User = require('../models/schema')
 
 route.post('/', (req,res)=>{
     const data = req.body;

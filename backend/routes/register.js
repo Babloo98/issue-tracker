@@ -1,6 +1,6 @@
 const express = require('express');
 const route = express.Router();
-const Register = require('./registerSchema')
+const Register = require('../models/registerSchema')
 
 route.post('/', (req,res)=>{
     const data = new Register(
