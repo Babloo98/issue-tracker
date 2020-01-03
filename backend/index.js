@@ -8,6 +8,7 @@ const bodyParser = require('body-parser');
 const detail = require('./routes/detail');
 const path = require("path");
 
+
 const PORT = 8000;
 const app = express();
 
