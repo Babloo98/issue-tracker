@@ -1,0 +1,18 @@
+.Landingpage{
+    height: 100vh;
+    background: linear-gradient(to bottom, #33ccff 0%, #ff99cc 100%);
+    .buttons{
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-60%);
+        button{
+            display: block;
+            padding : 20px 20px;
+            margin-top: 20px;
+            width: 100%;
+            // font-size: 18px;
+            // font-weight: 900;
+        }
+    }
+}

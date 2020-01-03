@@ -2,10 +2,28 @@
     height: 100vh;
     width: 100%;
     background: linear-gradient(to bottom, #33ccff 0%, #ff99cc 100%);
+    .register{
+        color: blue;
+        font-weight: 900;
+        font-size: 18px;
+        margin-top: -30px;    
+    }
     .login{
-        .input-group{
-            // width: 90%;
+        margin-top: 30px;
+        p{
+            font-size : 18px;
+            color : #697982;
+            font-weight : 900;
+        }
+        .input-fields{  
+            width: 100%;
             margin: 0 auto;
+            margin-bottom: 25px;
+        }
+        input{
+            width: 70%;
+            margin: 0 auto;
+            height: 35px;
         }
     }
 }

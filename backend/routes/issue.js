@@ -1,20 +1,25 @@
 const express = require('express');
 const route = express.Router();
-const issue = require('./schema')
+const Issue = require('./issueSchema');
+
 route.get('/',(req,res)=>{
-    console.log("rrrrrrrrr",req.body);
-    issue.find()
+    Issue.find()
     .then((resp)=>{
         res.send(resp);
     });
 });
 
 route.post('/',(req,res)=>{
-    console.log("oooo",req.body);
-    var data= new issue({type: "Glass Broken", phone: "99999999"});
-    data.save()
+    const data = req.body;
+    const payload = data.issue.map((item,id)=>{
+        return {
+            type: item,
+            phone:data.phone
+        }
+    })
+    console.log(payload);
+    var d = issue.insertMany( [...payload] )
     .then((ress)=>{
-        console.log(ress);
         res.status(200).send(ress);
     })
 });

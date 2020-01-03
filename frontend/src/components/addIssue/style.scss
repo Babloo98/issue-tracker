@@ -1,0 +1,21 @@
+.addissueWrapper{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to bottom, #33ccff 0%, #ff99cc 100%);
+    .addissue{
+        position: absolute;
+        left: 50%;
+        top: 60%;
+        transform: translate(-50%,-80%);
+        .checkboxwrapper{
+            display:flex;
+            justify-content: space-between;
+        }
+        label{
+            font-size: 18px;
+            color: #697982;
+            font-weight: 500;
+            margin-top: 10px;
+        }
+    }
+}

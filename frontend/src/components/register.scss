@@ -1,0 +1,18 @@
+.RegisterWrapper{
+    background: linear-gradient(to bottom, #33ccff 0%, #ff99cc 100%);
+    width : 100%;
+    height : 100vh;
+    .input-fields{
+        text-align : left;
+        max-width : 70%;
+        margin : 0 auto;
+        margin-top : 15px;
+        p{
+            margin : 0px;
+            margin-top : 4px;
+            font-size : 17px;
+            color : #767676;
+            font-weight: 500;
+        }
+    }
+}

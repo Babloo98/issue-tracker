@@ -1,0 +1,30 @@
+.adminwrapper{
+    width : 100%;
+    height : 100vh;
+    background: linear-gradient(to bottom, #33ccff 0%, #ff99cc 100%);
+    h2{
+        font-size: 22px;
+        margin-top: 50px;
+    }
+    .admin{
+            margin-top:50px;
+        .data{
+            display: flex;
+            max-width: 95%;
+            justify-content:space-around;
+            margin: 0 auto;
+            color:blue;
+            text-align: left;
+            font-weight:900;
+            font-size: 15px;
+            margin-top: 25px;
+            p {
+                display: inline-block;
+                width: 50%;
+                white-space: nowrap;
+                overflow: hidden !important;
+                text-overflow: ellipsis;
+            }
+        }
+    }
+}
