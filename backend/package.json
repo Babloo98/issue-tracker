@@ -1,6 +1,10 @@
 {
   "name": "backend",
   "version": "1.0.0",
+  "engines": {
+    "node": "8.16.2",
+    "npm": "6.11.3"
+  },
   "main": "index.js",
   "scripts": {
     "start": "node server.js",
