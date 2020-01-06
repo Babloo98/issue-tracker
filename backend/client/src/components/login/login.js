@@ -79,13 +79,13 @@ class Login extends React.Component {
                                 <input type="password" name="password" value = {this.state.password} onChange = {this.handleChange} className="form-control" id="input2" placeholder="Enter Password here!!" required/>
                             </div>  
                             <div className="input-fields">
-                                <button onClick={this.handleClick} className="btn btn-danger pr-5 pl-5">Login</button>
+                                <button onClick={this.handleClick} className="btn pr-5 pl-5">Login</button>
                             </div>                     
                         </div>
                     </form>
                 </div>
-            <span className = "register mr-3" onClick = {this.register} >Register</span>
-            <span className = "register ml-3" onClick = {this.reset} >Forget Password</span>
+            <p className = "register mb-2 mt-2" onClick = {this.register} >Register</p>
+            <p className = "register mt-1" onClick = {this.reset} >Forget Password</p>
             </div>
             )
             }

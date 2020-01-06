@@ -49,10 +49,7 @@ class Register extends React.Component{
         })
         .catch(function(error) {
             console.log(error);
-        });
-
-        // const {  } = this.state;
-        
+        });   
     }
 
     submitPhoneNumberAuthCode = () => {
@@ -104,7 +101,7 @@ class Register extends React.Component{
                     <p>Enter Password:</p>
                     <input type="password" name="password" value = {this.state.password} onChange = {this.handleChange} className="form-control" id="input4" placeholder="Enter Password" required/>
                 </div>  
-              <button  data-toggle="modal" data-target="#exampleModalCenter" onClick = {this.submitPhoneNumberAuth} className = "btn btn-danger mt-5">Register</button>  
+              <button  data-toggle="modal" data-target="#exampleModalCenter" onClick = {this.submitPhoneNumberAuth} className = "btn mt-4">Register</button>  
              
             </div>
             
@@ -112,15 +109,15 @@ class Register extends React.Component{
                 <div class="modal-dialog modal-dialog-centere" role="document">
                     <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Enter Otp</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <h5 style = { { color: "#767676" } } class="modal-title" id="exampleModalLabel">Enter Otp</h5>
+                        <button style = {{background: "none"}} type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
                     <div class="modal-body">
                     <input style = {{marginTop:"15px"}} type="otp" name="otp" value = {this.state.otp} onChange = {this.handleChange} id="input5" placeholder="Enter OTP" required/>
                     <div id="recaptcha-container"></div>
-                    <button onClick = {this.submitPhoneNumberAuthCode} className = "btn btn-danger mt-5">authenticate</button>  
+                    <button onClick = {this.submitPhoneNumberAuthCode} className = "btn mt-3">authenticate</button>  
                     </div>
                     </div>
                 </div>

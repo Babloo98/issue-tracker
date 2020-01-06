@@ -1,30 +1,41 @@
 .login-container {
   height: 100vh;
   width: 100%;
-  background: linear-gradient(to bottom, #33ccff 0%, #ff99cc 100%); }
+  background-image: linear-gradient(to top, #9890e3 0%, #b1f4cf 100%); }
   .login-container .register {
-    color: blue;
+    color: #215686;
     font-weight: 900;
     font-size: 18px;
     margin-top: -30px; }
   .login-container .login {
-    margin-top: 30px; }
+    margin-top: 50px; }
     .login-container .login p {
       font-size: 18px;
-      color: #697982;
-      font-weight: 900; }
+      color: #717275;
+      margin-bottom: 5px; }
     .login-container .login .input-fields {
-      width: 100%;
+      width: 80%;
       margin: 0 auto;
-      margin-bottom: 25px; }
+      margin-bottom: 15px;
+      display: flex;
+      text-align: left;
+      flex-direction: column; }
+      .login-container .login .input-fields button {
+        background: #3698f1;
+        color: white;
+        font-weight: 900;
+        margin-top: 15px; }
     .login-container .login input {
-      width: 70%;
-      margin: 0 auto;
-      height: 35px; }
+      height: 35px;
+      border-radius: 0px;
+      border: 1px solid #717275;
+      outline: none; }
+      .login-container .login input::placeholder {
+        color: #a8a8aa; }
 
 .Landingpage {
   height: 100vh;
-  background: linear-gradient(to bottom, #33ccff 0%, #ff99cc 100%); }
+  background-image: linear-gradient(to top, #9890e3 0%, #b1f4cf 100%); }
   .Landingpage .buttons {
     position: absolute;
     left: 50%;
@@ -39,7 +50,7 @@
 .addissueWrapper {
   width: 100%;
   height: 100vh;
-  background: linear-gradient(to bottom, #33ccff 0%, #ff99cc 100%); }
+  background-image: linear-gradient(to top, #9890e3 0%, #b1f4cf 100%); }
   .addissueWrapper .addissue {
     position: absolute;
     left: 50%;
@@ -55,17 +66,38 @@
       margin-top: 10px; }
 
 .RegisterWrapper {
-  background: linear-gradient(to bottom, #33ccff 0%, #ff99cc 100%);
   width: 100%;
-  height: 100vh; }
+  height: 100vh;
+  background-image: linear-gradient(to top, #9890e3 0%, #b1f4cf 100%); }
+  .RegisterWrapper button {
+    background: #3698f1;
+    color: white;
+    font-weight: 900;
+    outline: none;
+    padding: 10px 40px; }
+  .RegisterWrapper input {
+    height: 35px;
+    border-radius: 0px;
+    border: 1px solid #717275;
+    outline: none; }
+    .RegisterWrapper input::placeholder {
+      color: #a8a8aa; }
   .RegisterWrapper .input-fields {
     text-align: left;
     max-width: 70%;
     margin: 0 auto;
-    margin-top: 15px; }
+    margin-top: 20px; }
+    .RegisterWrapper .input-fields input {
+      height: 35px;
+      border-radius: 0px;
+      border: 1px solid #717275;
+      outline: none; }
+      .RegisterWrapper .input-fields input::placeholder {
+        color: #a8a8aa; }
     .RegisterWrapper .input-fields p {
       margin: 0px;
       margin-top: 4px;
+      margin-bottom: 5px;
       font-size: 17px;
       color: #767676;
       font-weight: 500; }
@@ -73,7 +105,7 @@
 .adminwrapper {
   width: 100%;
   height: 100vh;
-  background: linear-gradient(to bottom, #33ccff 0%, #ff99cc 100%); }
+  background-image: linear-gradient(to top, #9890e3 0%, #b1f4cf 100%); }
   .adminwrapper h2 {
     font-size: 22px;
     margin-top: 50px; }
@@ -99,12 +131,38 @@
 .viewissueWrapper {
   width: 100%;
   height: 100vh;
-  background: linear-gradient(to bottom, #33ccff 0%, #ff99cc 100%); }
+  background-image: linear-gradient(to top, #9890e3 0%, #b1f4cf 100%); }
   .viewissueWrapper .viewissue {
     margin-top: 50px; }
     .viewissueWrapper .viewissue h3 {
       font-size: 22px; }
   .viewissueWrapper .issues {
     margin: 15px; }
+
+.resetpasswordwrapper {
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(to top, #9890e3 0%, #b1f4cf 100%); }
+  .resetpasswordwrapper input {
+    height: 35px;
+    border-radius: 0px;
+    border: 1px solid #717275;
+    outline: none; }
+    .resetpasswordwrapper input::placeholder {
+      color: #a8a8aa; }
+  .resetpasswordwrapper button {
+    background: #3698f1;
+    color: white;
+    font-weight: 900;
+    margin-top: 15px; }
+  .resetpasswordwrapper .input-fields {
+    margin-top: 30px;
+    width: 70%;
+    margin: 0 auto; }
+    .resetpasswordwrapper .input-fields p {
+      margin-top: 30px;
+      color: #717275;
+      font-size: 18px;
+      font-weight: 600; }
 
 /*# sourceMappingURL=main.css.map */

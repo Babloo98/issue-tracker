@@ -1,5 +1,6 @@
 import React from 'react';
 import firebase from 'firebase';
+import Logo from '../../assets/logo.png';
 
 class Resetpassword extends React.Component{
 
@@ -65,10 +66,11 @@ class Resetpassword extends React.Component{
     render(){
         return(
             <div className="resetpasswordwrapper">
+                <img style= {{margin:"20px"}} src = {Logo} alt="logo"></img>
                 <div className="input-fields">
                     <p>Enter Phone Number:</p>
                     <input type="text" name="number" value = {this.state.number} onChange = {this.handleChange} className="form-control" id="input1" placeholder="Enter Phone Number" required/>
-                    <button  data-toggle="modal" data-target="#exampleModalCenter" onClick = {this.submitPhoneNumberAuth} className = "btn btn-danger mt-5">Reset Password</button>
+                    <button  data-toggle="modal" data-target="#exampleModalCenter" onClick = {this.submitPhoneNumberAuth} className = "btn mt-3">Reset Password</button>
                 </div>
                 
                 <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
@@ -76,14 +78,14 @@ class Resetpassword extends React.Component{
                     <div class="modal-content">
                     <div class="modal-header">
                         <h5 class="modal-title" id="exampleModalLabel">Enter Otp</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <button type="button" style = {{background: "none"}} class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
                     <div class="modal-body">
                     <input style = {{marginTop:"15px"}} type="otp" name="otp" value = {this.state.otp} onChange = {this.handleChange} id="input5" placeholder="Enter OTP" required/>
                     <div id="recaptcha-container"></div>
-                    <button onClick = {this.submitPhoneNumberAuthCode} className = "btn btn-danger mt-5">authenticate</button>  
+                    <button onClick = {this.submitPhoneNumberAuthCode} className = "btn mt-3">authenticate</button>  
                     </div>
                     </div>
                 </div>

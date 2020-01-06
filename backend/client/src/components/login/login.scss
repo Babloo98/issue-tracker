@@ -1,29 +1,42 @@
 .login-container{
     height: 100vh;
     width: 100%;
-    background: linear-gradient(to bottom, #33ccff 0%, #ff99cc 100%);
+    background-image: linear-gradient(to top, #9890e3 0%, #b1f4cf 100%);
     .register{
-        color: blue;
+        color: #215686;
         font-weight: 900;
         font-size: 18px;
         margin-top: -30px;    
     }
     .login{
-        margin-top: 30px;
+        margin-top: 50px;
         p{
             font-size : 18px;
-            color : #697982;
-            font-weight : 900;
+            color: #717275;
+            margin-bottom : 5px;
         }
         .input-fields{  
-            width: 100%;
-            margin: 0 auto;
-            margin-bottom: 25px;
+            width: 80%;
+            margin : 0 auto;
+            margin-bottom: 15px;
+            display:flex;
+            text-align: left;
+            flex-direction: column;
+            button{
+                background: #3698f1;
+                color: white;
+                font-weight: 900;
+                margin-top: 15px;
+            }
         }
         input{
-            width: 70%;
-            margin: 0 auto;
             height: 35px;
+            border-radius: 0px;
+            border: 1px solid #717275;
+            outline : none;
+            &::placeholder{
+                color: #a8a8aa;
+            }
         }
     }
 }

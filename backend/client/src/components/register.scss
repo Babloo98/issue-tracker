@@ -1,15 +1,41 @@
 .RegisterWrapper{
-    background: linear-gradient(to bottom, #33ccff 0%, #ff99cc 100%);
     width : 100%;
     height : 100vh;
+    background-image: linear-gradient(to top, #9890e3 0%, #b1f4cf 100%);
+    button{
+        background: #3698f1;
+        color: white;
+        font-weight: 900;
+        outline: none;
+        padding: 10px 40px;
+    }
+    input{
+        height: 35px;
+        border-radius: 0px;
+        border: 1px solid #717275;
+        outline : none;
+        &::placeholder{
+            color: #a8a8aa;
+        }
+    }
     .input-fields{
         text-align : left;
         max-width : 70%;
         margin : 0 auto;
-        margin-top : 15px;
+        margin-top : 20px;
+        input{
+            height: 35px;
+            border-radius: 0px;
+            border: 1px solid #717275;
+            outline : none;
+            &::placeholder{
+                color: #a8a8aa;
+            }
+        }
         p{
             margin : 0px;
             margin-top : 4px;
+            margin-bottom: 5px;
             font-size : 17px;
             color : #767676;
             font-weight: 500;
