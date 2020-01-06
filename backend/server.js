@@ -25,7 +25,6 @@ app.use(function(req, res, next) {
   });
 
 
-const db = process.env.MONGODB_URL;
 
 // const connectDB = async () => {
 //   try {
@@ -39,7 +38,7 @@ const db = process.env.MONGODB_URL;
 //     process.exit(1);
 //   }
 // };
-mongoose.connect(process.env.MONGOLAB_WHITE_URI||'mongodb://localhost/issue_tracker');
+mongoose.connect('mongodb://root:test123@ds259878.mlab.com:59878/heroku_7n8llkgd');
 
 app.use('/login',login);
 app.use('/issue',issue);
