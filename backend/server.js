@@ -7,6 +7,7 @@ const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const detail = require('./routes/detail');
 const path = require("path");
+const config = require("dotenv").config();
 
 
 const PORT = 8000;
@@ -24,9 +25,6 @@ app.use(function(req, res, next) {
     next();
   });
 
-
-const db = process.env.MONGODB_URL;
-
 // const connectDB = async () => {
 //   try {
 //     await mongoose.connect(db, {
@@ -39,7 +37,7 @@ const db = process.env.MONGODB_URL;
 //     process.exit(1);
 //   }
 // };
-mongoose.connect(`mongodb://localhost/issue_tracker` || db);
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/issue_tracker");
 
 app.use('/login',login);
 app.use('/issue',issue);
