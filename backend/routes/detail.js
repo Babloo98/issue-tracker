@@ -13,7 +13,7 @@ route.post('/', (req,res)=>{
     User.findOne({email:req.body.email}).then(
         resp =>{
             if(resp){
-                const temp = [];
+                let temp = [];
                 temp = [...resp.issue,...payload.issue];
                 console.log(temp)
                 User.findOneAndUpdate({ email: payload.email }, { $set:{issue : temp} })
