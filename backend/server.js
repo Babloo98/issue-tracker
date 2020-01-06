@@ -7,7 +7,6 @@ const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const detail = require('./routes/detail');
 const path = require("path");
-const MongoClient = require('mongodb').MongoClient;
 
 
 const PORT = 8000;
@@ -26,10 +25,7 @@ app.use(function(req, res, next) {
   });
 
 
-
-const dbUser = 'babloo';
-const dbPassword = 'Babloo@123';
-
+const db = process.env.MONGODB_URL;
 
 // const connectDB = async () => {
 //   try {
@@ -43,7 +39,7 @@ const dbPassword = 'Babloo@123';
 //     process.exit(1);
 //   }
 // };
-MongoClient.connect(`mongodb+srv://${dbUser}:${dbPassword}@cluster0-5dzyk.mongodb.net/issue_tracker?retryWrites=true&w=majority`);
+mongoose.connect(process.env.MONGOLAB_WHITE_URI||'mongodb://localhost/issue_tracker');
 
 app.use('/login',login);
 app.use('/issue',issue);
@@ -58,8 +54,8 @@ app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "client", "build", "index.html"));
 });
 
-app.listen((process.env.PORT || PORT),()=>{
-    console.log("App is running on http://localhost:port",process.env.PORT);
+app.listen(PORT,()=>{
+    console.log("App is running on http://localhost:8000");
 })
 
 

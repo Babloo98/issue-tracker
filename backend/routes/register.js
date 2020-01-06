@@ -11,17 +11,11 @@ route.post('/', (req,res)=>{
             password:req.body.password
         }
     )
-    Register.findOne({email:req.body.email}).then(
-        resp =>{
-            if(resp)res.status(200).send(resp);
-            else{
-                data.save()
-                .then((ress)=>{
-                    res.status(200).send(ress);
-                })
-            }
-        }
-    )
+    console.log("hello frfndsd",data)
+    data.save()
+    .then((ress)=>{
+        res.status(200).send(ress);
+    })
     .catch(err=>{console.log('erroe',err)})
 });
 

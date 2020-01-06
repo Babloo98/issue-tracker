@@ -17,7 +17,7 @@ function App() {
       <Router>
         <PrivateRoute exact path = "/landingpage" component = {LandingPage}/>
         <Route exact path = "/" component = {Login}/>
-        <PrivateRoute exact path = "/Register" component = {Register}/>
+        <Route exact path = "/Register" component = {Register}/>
         <PrivateRoute exact path = "/addissue" component = {Addissue}/>
         <PrivateRoute exact path = "/showissue" component = {Viewissue}/>
         <AdminRoute exact path = "/admin" component = {Admin}/>
