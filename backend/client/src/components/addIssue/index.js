@@ -16,7 +16,7 @@ class Addissue extends React.Component{
 
     componentDidMount(){
         let self = this;
-        axios.get('http://localhost:8000/detail')
+        axios.get('https://arch-system.herokuapp.com/detail')
           .then(function (response) {
             let data = sessionStorage.getItem('email');
             response.data.map(item=>{
@@ -58,7 +58,7 @@ class Addissue extends React.Component{
         const {issue} = this.state;
         let email = sessionStorage.getItem('email');
         const data = {issue: issue, email: email};
-        axios.post('http://localhost:8000/detail',data)
+        axios.post('https://arch-system.herokuapp.com/detail',data)
           .then(res=>{
               Swal.fire(
                 'Issue Addded!',

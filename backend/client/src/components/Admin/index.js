@@ -12,7 +12,7 @@ class Admin extends React.Component{
 
     componentDidMount(){
         let self = this;
-        axios.get('http://localhost:8000/Register')
+        axios.get('https://arch-system.herokuapp.com/Register')
           .then(function (response) {
             let data = sessionStorage.getItem('email');
             var payload = response['data'];

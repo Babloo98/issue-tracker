@@ -24,7 +24,7 @@ class Reset extends React.Component{
         const self = this;
         const { email, password } = this.state;
         const number = sessionStorage.getItem('number');
-        axios.patch('http://localhost:8000/reset', {
+        axios.patch('https://arch-system.herokuapp.com/reset', {
             email: email,
             password: password,
             number: number

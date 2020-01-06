@@ -13,7 +13,10 @@ route.post('/', (req,res)=>{
     User.findOne({email:req.body.email}).then(
         resp =>{
             if(resp){
-                User.findOneAndUpdate({ email: payload.email }, { $set:{issue : payload.issue} })
+                const temp = [];
+                temp = [...resp.issue,...payload.issue];
+                console.log(temp)
+                User.findOneAndUpdate({ email: payload.email }, { $set:{issue : temp} })
                 .then((ress)=>{res.status(200).send(ress)});
             }
             else{

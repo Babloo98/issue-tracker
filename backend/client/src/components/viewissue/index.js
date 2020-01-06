@@ -15,7 +15,7 @@ class Viewissue extends React.Component{
 
     componentDidMount(){
         let self = this;
-        axios.get('http://localhost:8000/detail')
+        axios.get('https://arch-system.herokuapp.com/detail')
           .then(function (response) {
             let data = sessionStorage.getItem('email');
             response.data.map(item=>{
@@ -45,7 +45,7 @@ class Viewissue extends React.Component{
         issue = dataToShow['issue']
         let email = sessionStorage.getItem('email');
         axios
-        .patch('http://localhost:8000/detail', {
+        .patch('https://arch-system.herokuapp.com/detail', {
             email: email,
             issue: issue,
          })

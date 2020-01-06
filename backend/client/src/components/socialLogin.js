@@ -71,7 +71,7 @@ class Register extends React.Component{
         const { name,number,email,password } = this.state; 
         const phoneNumber = `+91 ${number}`
         const data = {name: name, number : phoneNumber, email : email, password : password};
-        axios.post('http://localhost:8000/register',data)
+        axios.post('https://arch-system.herokuapp.com/Register',data)
         .then(res=>{
             this.props.history.push('/');
             window.location.reload();
