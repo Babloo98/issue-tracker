@@ -59,7 +59,7 @@ app.get("*", (req, res) => {
 });
 
 app.listen((process.env.PORT || PORT),()=>{
-    console.log("App is running on http://localhost:8000");
+    console.log("App is running on http://localhost:port",process.env.PORT);
 })
 
 
