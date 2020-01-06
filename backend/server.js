@@ -7,7 +7,7 @@ const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const detail = require('./routes/detail');
 const path = require("path");
-const config = require("dotenv").config();
+const MongoClient = require('mongodb').MongoClient;
 
 
 const PORT = 8000;
@@ -25,6 +25,12 @@ app.use(function(req, res, next) {
     next();
   });
 
+
+
+const dbUser = 'babloo';
+const dbPassword = 'Babloo@123';
+
+
 // const connectDB = async () => {
 //   try {
 //     await mongoose.connect(db, {
@@ -37,7 +43,7 @@ app.use(function(req, res, next) {
 //     process.exit(1);
 //   }
 // };
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/issue_tracker");
+MongoClient.connect(`mongodb+srv://${dbUser}:${dbPassword}@cluster0-5dzyk.mongodb.net/issue_tracker?retryWrites=true&w=majority`);
 
 app.use('/login',login);
 app.use('/issue',issue);
