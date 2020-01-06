@@ -165,4 +165,30 @@
       font-size: 18px;
       font-weight: 600; }
 
+.resetpasswordwrapper {
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(to top, #9890e3 0%, #b1f4cf 100%); }
+  .resetpasswordwrapper input {
+    height: 35px;
+    border-radius: 0px;
+    border: 1px solid #717275;
+    outline: none; }
+    .resetpasswordwrapper input::placeholder {
+      color: #a8a8aa; }
+  .resetpasswordwrapper button {
+    background: #3698f1;
+    color: white;
+    font-weight: 900;
+    margin-top: 15px; }
+  .resetpasswordwrapper .input-fields {
+    margin-top: 30px;
+    width: 70%;
+    margin: 0 auto; }
+    .resetpasswordwrapper .input-fields p {
+      margin-top: 30px;
+      color: #717275;
+      font-size: 18px;
+      font-weight: 600; }
+
 /*# sourceMappingURL=main.css.map */
